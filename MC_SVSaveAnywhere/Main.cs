@@ -20,7 +20,7 @@ namespace MC_SVSaveAnywhere
 
         [HarmonyPatch(typeof(MenuControl), nameof(MenuControl.PrepareSaveGame))]
         [HarmonyPrefix]
-        private static void MenuControlVerifyAutoSave_Pre(bool manualSave)
+        private static void MenuControlPrepareSaveGame_Pre(bool manualSave)
         {
             Main.manualSave = manualSave;
         }
